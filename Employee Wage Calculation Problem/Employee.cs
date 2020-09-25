@@ -15,5 +15,11 @@ namespace Employee_Wage_Calculation_Problem
             this.name = name;
         }
 
+
+        public int CalculateWage(int hours, int wage)
+        {
+            return hours * wage;
+
+        }
     }
 }
