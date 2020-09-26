@@ -6,38 +6,36 @@ namespace Employee_Wage_Calculation_Problem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage problem!");
 
             Random rand = new Random();
+            int is_full_time = 1;
+            int is_part_time = 2;
+            int wage = 20;
 
-           
-
-            int is_attended = rand.Next(0, 2);
-
-            const int attended = 1;
-            const int wage_per_hour = 20;
-
-            Employee e1 = new Employee(1, "Sai");
-
-
-            if (is_attended == attended)
+            //variable
+            int type = rand.Next(0,3);
+            int hours = 0;
+            int total_wage = 0;
+            
+            if (is_full_time == type)
             {
-                Console.Out.WriteLine("Employee is present");
+                hours = 8;
 
-                int hours = rand.Next(0, 9);
-
-                int wage = e1.CalculateWage(hours, wage_per_hour);
-
-                Console.Out.WriteLine("Employee's wage of the day is " + wage);
+            }
+            else if(is_part_time == type)
+            {
+                hours = 4;
             }
             else
             {
-                Console.Out.WriteLine("Employee is absent");
+                hours = 0;
             }
 
-            
+
+            total_wage = hours * wage;
 
 
+            Console.Out.WriteLine(total_wage);
         }
     }
 }
