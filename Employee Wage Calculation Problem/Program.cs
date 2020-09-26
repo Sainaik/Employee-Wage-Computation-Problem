@@ -27,10 +27,10 @@ namespace Employee_Wage_Calculation_Problem
                 int hours = 0;
                 switch (type)
                 {
-                    case 1:
+                    case IS_FULL_TIME:
                         hours = 8;
                         break;
-                    case 2:
+                    case IS_PART_TIME:
                         hours = 4;
                         break;
                     default:
