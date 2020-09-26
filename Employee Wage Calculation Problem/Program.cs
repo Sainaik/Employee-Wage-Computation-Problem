@@ -8,8 +8,9 @@ namespace Employee_Wage_Calculation_Problem
         {
 
             Random rand = new Random();
-            int is_full_time = 1;
-            int is_part_time = 2;
+            const int IS_FULL_TIME = 1;
+            const int IS_PART_TIME = 2;
+            const int MONTHLY_DAYS = 20; 
             int wage = 20;
 
             //variable
@@ -31,7 +32,7 @@ namespace Employee_Wage_Calculation_Problem
             }
 
 
-            total_wage = hours * wage;
+            total_wage = hours * wage * MONTHLY_DAYS;
 
 
             Console.Out.WriteLine(total_wage);
