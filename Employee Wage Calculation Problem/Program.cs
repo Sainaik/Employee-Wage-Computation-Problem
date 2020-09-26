@@ -6,11 +6,8 @@ namespace Employee_Wage_Calculation_Problem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage problem!");
 
             Random rand = new Random();
-
-            Employee e1 = new Employee(1,"Sai");
 
             int is_attended = rand.Next(0, 2);
 
