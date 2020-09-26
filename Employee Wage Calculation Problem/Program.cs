@@ -8,8 +8,11 @@ namespace Employee_Wage_Calculation_Problem
         {
 
             Random rand = new Random();
-            int is_full_time = 1;
-            int is_part_time = 2;
+
+            // contants
+            const int IS_FULL_TIME = 1;
+            const int IS_PART_TIME = 2;
+
             int wage = 20;
 
             //variable
@@ -19,10 +22,10 @@ namespace Employee_Wage_Calculation_Problem
 
             switch (type)
             {
-                case 1:
+                case IS_FULL_TIME:
                     hours = 8;
                     break;
-                case 2:
+                case IS_PART_TIME:
                     hours = 4;
                     break;
                 default:
