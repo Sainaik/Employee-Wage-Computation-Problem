@@ -17,18 +17,17 @@ namespace Employee_Wage_Calculation_Problem
             int hours = 0;
             int total_wage = 0;
             
-            if (is_full_time == type)
+           switch(type)
             {
-                hours = 8;
-
-            }
-            else if(is_part_time == type)
-            {
-                hours = 4;
-            }
-            else
-            {
-                hours = 0;
+                case 1:
+                    hours = 8;
+                    break;
+                case 2:
+                    hours = 4;
+                    break;
+                default:
+                    hours = 0;
+                    break;
             }
 
 
