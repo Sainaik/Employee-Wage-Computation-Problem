@@ -8,37 +8,51 @@ namespace Employee_Wage_Calculation_Problem
         {
 
             Random rand = new Random();
-            int is_full_time = 1;
-            int is_part_time = 2;
-            int wage = 20;
+            const int IS_FULL_TIME = 1;
+            const int IS_PART_TIME = 2;
+            const int TOTAL_WORKING_HOURS = 100;
+            const int TOTAL_WORKING_DAYS = 20;
+            const int WAGE_PER_HOUR = 20;
 
             //variable
-            int type = rand.Next(0,3);
-            int hours = 0;
+
+            int numberOfHours = 0;
+            int workingDays = 0;
             int total_wage = 0;
-            int days = rand.Next(0, 31);
-            
-           switch(type)
+
+
+            while (numberOfHours <= TOTAL_WORKING_HOURS && workingDays <= TOTAL_WORKING_DAYS)
             {
-                case 1:
-                    hours = 8;
-                    break;
-                case 2:
-                    hours = 4;
-                    break;
-                default:
-                    hours = 0;
-                    break;
+                int type = rand.Next(0, 3);
+                int hours = 0;
+                switch (type)
+                {
+                    case 1:
+                        hours = 8;
+                        break;
+                    case 2:
+                        hours = 4;
+                        break;
+                    default:
+                        hours = 0;
+                        break;
 
+                }
+
+                numberOfHours += hours;
+
+                workingDays++;
+
+
+                Console.Out.WriteLine("Day "+workingDays+" hours "+ hours);
             }
-            int total_hours = hours * days;
 
-            if(days>= 10)
+            total_wage = numberOfHours * WAGE_PER_HOUR;
 
-            total_wage = hours * wage;
+            Console.Out.WriteLine("Total wage of the month :" + total_wage);
 
 
-            Console.Out.WriteLine(total_wage);
         }
+
     }
 }
