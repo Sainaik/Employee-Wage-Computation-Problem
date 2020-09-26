@@ -16,6 +16,7 @@ namespace Employee_Wage_Calculation_Problem
             int type = rand.Next(0,3);
             int hours = 0;
             int total_wage = 0;
+            int days = rand.Next(0, 31);
             
            switch(type)
             {
@@ -28,8 +29,11 @@ namespace Employee_Wage_Calculation_Problem
                 default:
                     hours = 0;
                     break;
-            }
 
+            }
+            int total_hours = hours * days;
+
+            if(days>= 10)
 
             total_wage = hours * wage;
 
